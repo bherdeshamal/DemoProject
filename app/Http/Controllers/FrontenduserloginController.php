@@ -36,15 +36,17 @@ class FrontenduserloginController extends Controller
         if($request->isMethod('post'))
         {
             $data =$request->all();
-           // echo "<pre>"; print_r($data); die;
+          
                if(Auth::attempt(['email'=>$data['email'],'password'=> $data['password'],'role'=>0]))
               {
                    return redirect('/dashboard')->with('success','login Successfully');
                }
                else
                {
-                return redirect()->back()->with('error','Invalid Credentials..');
+                return redirect()->back()->with('error','Unauthorized User');
                } 
+              
+              
          }
           
        }
@@ -244,8 +246,9 @@ class FrontenduserloginController extends Controller
           $data['coupon_amount'] = Session::get('CouponAmount');
         }      
 
-
+       $email = $user_email;
         $data= array(
+         
           'name' =>$shippingDetails->name,
           'user_email' =>$user_email,
           'user_id'=>$user_id,
@@ -263,9 +266,11 @@ class FrontenduserloginController extends Controller
         
       );
 
-         Mail::to('shamalbherde02@gmail.com')->send(new sendusermail($data)); 
+        Mail::to('shamalbherde02@gmail.com')->send(new sendusermail($data)); 
         Mail::to('shamalbherde02@gmail.com')->send(new detailsmail($data));
        
+
+       //sandipmadankar62@gmail.com
         
           $order = new Order;
           $order->user_id = $user_id;

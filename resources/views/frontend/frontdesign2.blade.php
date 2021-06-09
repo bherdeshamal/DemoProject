@@ -39,6 +39,7 @@
     
 
   
+    <script src="{{ asset('js/frontjs/mainn.js') }}"></script>
     <script src="{{ asset('admin/dist/js/main.js') }}"></script>
     <script src="{{asset('js/frontjs/jquery.js')}}"></script>
 	<script src="{{asset('js/frontjs/bootstrap.min.js')}}"></script>
@@ -46,6 +47,8 @@
 	<script src="{{asset('js/frontjs/price-range.js')}}"></script>
     <script src="{{asset('js/frontjs/jquery.prettyPhoto.js')}}"></script>
     <script src="{{asset('js/frontjs/easyzoom.js')}}"></script>
+    
+    <script src="{{ asset('js/frontjs/mainn.js') }}"></script>
     <script src="{{asset('js/frontjs/main.js')}}"></script>
     
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>

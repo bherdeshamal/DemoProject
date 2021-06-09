@@ -3,10 +3,13 @@
  $cur_month= date('M');
  $last_month=date('M',strtotime("-1 month"));
  $last_to_last_month=date('M',strtotime("-2 month"));
+ $last_to_last_to_last_month=date('M',strtotime("-3 month"));
  $dataPoints = array(
      array("y" => $current_month_users, "label" => $cur_month),
      array("y" => $last_month_users, "label" => $last_month),
      array("y" => $last_last_month_users, "label" => $last_to_last_month),
+     
+     array("y" => $last_last_last_month_users, "label" => $last_to_last_to_last_month),
      
  );
   
@@ -318,10 +321,7 @@ chart.render();
                                    
                                   
                        
-                        <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link"
-                                href="view-users-charts" aria-expanded="false"><i class="mdi mdi-chart-bar"></i><span
-                                    class="hide-menu">Charts</span></a></li>
-                                    
+                                     
                                     <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link"
                                 href="http://127.0.0.1:8000/" aria-expanded="false"><i class="fa fa-power-off me-1 ms-1"></i><span
                                     class="hide-menu">Logout</span></a></li>
@@ -491,7 +491,7 @@ chart.render();
                                             <div class="col-6">
                                                 <div class="bg-dark p-10 text-white text-center">
                                                     <i class="fa fa-user mb-1 font-16"></i>
-                                                    <h5 class="mb-0 mt-1"> {{$users}} </h5>
+                                                    <h5 class="mb-0 mt-1"> {{$users +3}} </h5>
                                                     <small class="font-light">Total Users</small>
                                                 </div>
                                             </div>

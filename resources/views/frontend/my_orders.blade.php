@@ -48,7 +48,7 @@
                             @endforeach
                             </td>
                             <td class="cart_price">
-                                <p>Price: Rs {{$order->payment_method}}</p>
+                                <p> {{$order->payment_method}}</p>
                             </td>
                          	<td class="cart_quantity">
                             {{$order->grand_total}}

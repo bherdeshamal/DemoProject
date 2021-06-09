@@ -165,6 +165,8 @@ return [
         Illuminate\View\ViewServiceProvider::class,
         Maatwebsite\Excel\ExcelServiceProvider::class,
 		UxWeb\SweetAlert\SweetAlertServiceProvider::class,
+        
+        Skovmand\Mailchimp\MailchimpServiceProvider::class,
 
         /*
          * Package Service Providers...
@@ -229,7 +231,8 @@ return [
         'View' => Illuminate\Support\Facades\View::class,
         'Excel' => Maatwebsite\Excel\Facades\Excel::class,
 		'Alert' => UxWeb\SweetAlert\SweetAlert::class,
-
+        'Mailchimp'=>Skovmand\Mailchimp\MailchimpServiceProvider::class,
+       
     ],
 
 ];

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Userm;
+use App\Order;
 use Carbon\Carbon;
 use App\User;
 use App\Role;
@@ -108,5 +109,13 @@ class usermscontroller extends Controller
 
 
       return view('usermanage.view_users_charts')->with(compact('current_month_users','last_month_users','last_last_month_users'));
+    }
+
+    public function charts()
+    {
+
+      $current_month_users=Order::whereYear('created_at',Carbon::now()->year)->whereMonth('created_at',Carbon::now()->month)->count();
+
+      return view('usermanage.charts')->with(compact('current_month_users'));
     }
 }

@@ -88,11 +88,11 @@
 						<div class="single-widget">
 							<h2>Service</h2>
 							<ul class="nav nav-pills nav-stacked">
-								<li><a href="pages/online_help">Online Help</a></li>
-								<li><a href="pages/contact_us">Contact Us</a></li>
-								<li><a href="pages/order_status">Order Status</a></li>
-								<li><a href="pages/change_location">Change Location</a></li>
-								<li><a href="pages/Faq">FAQ’s</a></li>
+								<li><a href="{{url('pages/terms')}}">Online Help</a></li>
+								<li><a href="{{url('pages/terms')}}">Contact Us</a></li>
+								<li><a href="{{url('pages/order')}}">Order Status</a></li>
+								<li><a href="{{url('pages/change')}}">Change Location</a></li>
+								<li><a href="{{url('pages/faq')}}">FAQ’s</a></li>
 							</ul>
 						</div>
 					</div>
@@ -100,11 +100,11 @@
 						<div class="single-widget">
 							<h2>Quock Shop</h2>
 							<ul class="nav nav-pills nav-stacked">
-								<li><a href="pages/tshirt">T-Shirt</a></li>
-								<li><a href="pages/mens">Mens</a></li>
-								<li><a href="pages/womens">Womens</a></li>
-								<li><a href="pages/gift_cards">Gift Cards</a></li>
-								<li><a href="pages/shoes">Shoes</a></li>
+								<li><a href="{{url('pages/tshirt')}}">T-Shirt</a></li>
+								<li><a href="{{url('pages/mens')}}">Mens</a></li>
+								<li><a href="{{url('pages/womens')}}">Womens</a></li>
+								<li><a href="{{url('pages/gift')}}">Gift Cards</a></li>
+								<li><a href="{{url('pages/shoes')}}">Shoes</a></li>
 							</ul>
 						</div>
 					</div>
@@ -112,11 +112,11 @@
 						<div class="single-widget">
 							<h2>Policies</h2>
 							<ul class="nav nav-pills nav-stacked">
-								<li><a href="pages/terms">Terms of Use</a></li>
-								<li><a href="pages/privacy_policy">Privecy Policy</a></li>
-								<li><a href="pages/refund_policy">Refund Policy</a></li>
-								<li><a href="pages/billing_system">Billing System</a></li>
-								<li><a href="pages/ticket_system">Ticket System</a></li>
+								<li><a href="{{url('pages/terms')}}">Terms of Use</a></li>
+								<li><a href="{{url('pages/privacy')}}">Privecy Policy</a></li>
+								<li><a href="{{url('pages/refund')}}">Refund Policy</a></li>
+								<li><a href="{{url('pages/bills')}}">Billing System</a></li>
+								<li><a href="{{url('pages/ticket')}}">Ticket System</a></li>
 							</ul>
 						</div>
 					</div>
@@ -124,11 +124,11 @@
 						<div class="single-widget">
 							<h2>About Shopper</h2>
 							<ul class="nav nav-pills nav-stacked">
-								<li><a href="pages/company_info">Company Information</a></li>
-								<li><a href="pages/career">Careers</a></li>
-								<li><a href="pages/store">Store Location</a></li>
-								<li><a href="pages/affillate">Affillate Program</a></li>
-								<li><a href="pages/copyright">Copyright</a></li>
+								<li><a href="{{url('pages/company')}}">Company Information</a></li>
+								<li><a href="{{url('pages/careers')}}">Careers</a></li>
+								<li><a href="{{url('pages/store')}}">Store Location</a></li>
+								<li><a href="{{url('pages/affillate')}}">Affillate Program</a></li>
+								<li><a href="{{url('pages/copyright')}}">Copyright</a></li>
 							</ul>
 						</div>
 					</div>

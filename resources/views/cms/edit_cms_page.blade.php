@@ -369,7 +369,8 @@
                                         </br>
                                         
     <label for="url">Page Status</label>
-                                    <select id="status" name="status"  class="required form-control">
+                                    <select id="status" name="status" value="{{$cms->status}}" class="required form-control">
+                                      
                                         <option value="1">Active</option>
                                         <option value="2">Inactive</option>
                                     </select> 

@@ -28,6 +28,7 @@ class CreateOrdersTable extends Migration
             $table->string('coupon_code');
             $table->string('coupon_amount');
             $table->string('order_status');
+            $table->string('tracking_msg')->default('Inprogress');
             $table->string('payment_method');
             $table->string('grand_total');
             $table->date('created_at');

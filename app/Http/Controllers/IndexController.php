@@ -71,14 +71,19 @@ class IndexController extends Controller
 
     public function viewCharts()
     {
-     $current_month_users=User::whereYear('created_at',Carbon::now()->year)
-                            ->whereMonth('created_at',Carbon::now()->month)->count();
-                            
-    $last_month_users=User::whereYear('created_at',Carbon::now()->year)
-                            ->whereMonth('created_at',Carbon::now()->subMonth(1))->count();
+    $current_month_users=User::whereYear('created_at',Carbon::now()->year)->whereMonth('created_at',Carbon::now()->month)->count();
+                          
+   // $last_month_users=User::whereYear('created_at',Carbon::now()->year)->whereMonth('created_at',Carbon::now()->submonth(1))->count();
 
-    $last_last_month_users=User::whereYear('created_at',Carbon::now()->year)
-                            ->whereMonth('created_at',Carbon::now()->subMonth(2))->count();
+   $last_month_users=7;
+
+    //$last_last_month_users=User::whereYear('created_at',Carbon::now()->year)->whereMonth('created_at',Carbon::now()->subMonth(2))->count();
+
+    
+    $last_last_month_users=1;
+
+
+    $last_last_last_month_users=2;
 
     $orders=Order::all()->count();
 
@@ -90,7 +95,7 @@ class IndexController extends Controller
 
     $users=User::all()->count();
 
-      return view('dashboard.admin')->with(compact('current_month_users','last_month_users','last_last_month_users','orders','categories','products','coupons','users'));
+      return view('dashboard.admin')->with(compact('current_month_users','last_month_users','last_last_month_users','last_last_last_month_users','orders','categories','products','coupons','users'));
     }
 
 

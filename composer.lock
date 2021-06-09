@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "cd4f4da94005f3fcbfff7705c488d802",
+    "content-hash": "71ff3dee8a81cc360ab161ed773958b2",
     "packages": [
         {
             "name": "dnoegel/php-xdg-base-dir",
@@ -1119,6 +1119,53 @@
             "time": "2020-05-30T13:11:16+00:00"
         },
         {
+            "name": "mailchimp/mailchimp",
+            "version": "2.0.6",
+            "source": {
+                "type": "git",
+                "url": "https://bitbucket.org/mailchimp/mailchimp-api-php.git",
+                "reference": "7ac99b5ac746d5875c5c350ad7e3b83674c83ec1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://bitbucket.org/mailchimp/mailchimp-api-php/get/7ac99b5ac746d5875c5c350ad7e3b83674c83ec1.zip",
+                "reference": "7ac99b5ac746d5875c5c350ad7e3b83674c83ec1",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.2.0"
+            },
+            "require-dev": {
+                "apigen/apigen": "dev-master"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "Mailchimp": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "MailChimp Devs",
+                    "email": "api@mailchimp.com",
+                    "homepage": "http://mailchimp.com",
+                    "role": "Developer"
+                }
+            ],
+            "description": "API client library for the MailChimp bulk email as a service platform",
+            "homepage": "https://bitbucket.org/mailchimp/mailchimp-api-php",
+            "keywords": [
+                "api",
+                "email"
+            ],
+            "abandoned": "mailchimp/marketing",
+            "time": "2014-10-30T20:38:12+00:00"
+        },
+        {
             "name": "markbaker/complex",
             "version": "2.0.0",
             "source": {
@@ -1606,6 +1653,61 @@
                 "source": "https://github.com/nikic/PHP-Parser/tree/v4.10.4"
             },
             "time": "2020-12-20T10:01:03+00:00"
+        },
+        {
+            "name": "nztim/mailchimp",
+            "version": "v3.11",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/nztim/mailchimp.git",
+                "reference": "e92a403df83553b6a5e7044805b75b30e59ed66f"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/nztim/mailchimp/zipball/e92a403df83553b6a5e7044805b75b30e59ed66f",
+                "reference": "e92a403df83553b6a5e7044805b75b30e59ed66f",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.0.0",
+                "rmccue/requests": "^1.7"
+            },
+            "require-dev": {
+                "mockery/mockery": "~1.0",
+                "phpunit/phpunit": "^6.5"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "NZTim\\Mailchimp\\MailchimpServiceProvider"
+                    ],
+                    "aliases": {
+                        "Mailchimp": "NZTim\\Mailchimp\\MailchimpFacade"
+                    }
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "NZTim\\Mailchimp\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Tim",
+                    "email": "tim@nztim.com"
+                }
+            ],
+            "description": "Mailchimp API wrapper, includes Laravel 5 support.",
+            "support": {
+                "issues": "https://github.com/nztim/mailchimp/issues",
+                "source": "https://github.com/nztim/mailchimp/tree/master"
+            },
+            "time": "2019-07-26T20:38:57+00:00"
         },
         {
             "name": "paragonie/random_compat",
@@ -2237,6 +2339,102 @@
                 "wiki": "https://github.com/ramsey/uuid/wiki"
             },
             "time": "2020-02-21T04:36:14+00:00"
+        },
+        {
+            "name": "rmccue/requests",
+            "version": "v1.8.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/WordPress/Requests.git",
+                "reference": "82e6936366eac3af4d836c18b9d8c31028fe4cd5"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/WordPress/Requests/zipball/82e6936366eac3af4d836c18b9d8c31028fe4cd5",
+                "reference": "82e6936366eac3af4d836c18b9d8c31028fe4cd5",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.2"
+            },
+            "require-dev": {
+                "dealerdirect/phpcodesniffer-composer-installer": "^0.7",
+                "php-parallel-lint/php-console-highlighter": "^0.5.0",
+                "php-parallel-lint/php-parallel-lint": "^1.3",
+                "phpcompatibility/php-compatibility": "^9.0",
+                "phpunit/phpunit": "^4.8 || ^5.7 || ^6.5 || ^7.5",
+                "requests/test-server": "dev-master",
+                "squizlabs/php_codesniffer": "^3.5",
+                "wp-coding-standards/wpcs": "^2.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "Requests": "library/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "ISC"
+            ],
+            "authors": [
+                {
+                    "name": "Ryan McCue",
+                    "homepage": "http://ryanmccue.info"
+                }
+            ],
+            "description": "A HTTP library written in PHP, for human beings.",
+            "homepage": "http://github.com/WordPress/Requests",
+            "keywords": [
+                "curl",
+                "fsockopen",
+                "http",
+                "idna",
+                "ipv6",
+                "iri",
+                "sockets"
+            ],
+            "support": {
+                "issues": "https://github.com/WordPress/Requests/issues",
+                "source": "https://github.com/WordPress/Requests/tree/v1.8.1"
+            },
+            "time": "2021-06-04T09:56:25+00:00"
+        },
+        {
+            "name": "skovmand/mailchimp-laravel",
+            "version": "1.0.10",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/skovmand/mailchimp-laravel.git",
+                "reference": "4ead2308cb0774306734d24f006dc7fe43666af3"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/skovmand/mailchimp-laravel/zipball/4ead2308cb0774306734d24f006dc7fe43666af3",
+                "reference": "4ead2308cb0774306734d24f006dc7fe43666af3",
+                "shasum": ""
+            },
+            "require": {
+                "laravel/framework": "5.0 - 5.6",
+                "mailchimp/mailchimp": "~2.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Skovmand\\Mailchimp\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "A minimal service provider to set up and use the Mailchimp Api v2 PHP library in Laravel 5.*",
+            "support": {
+                "issues": "https://github.com/skovmand/mailchimp-laravel/issues",
+                "source": "https://github.com/skovmand/mailchimp-laravel/tree/master"
+            },
+            "abandoned": true,
+            "time": "2018-09-30T09:28:05+00:00"
         },
         {
             "name": "swiftmailer/swiftmailer",

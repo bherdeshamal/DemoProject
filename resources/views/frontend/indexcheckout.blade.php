@@ -49,7 +49,10 @@
 						<div class="form-group">
 							<input type="text" name="billing_mobile" placeholder="Billing Mobile" value="{{$userDetails->mobile}}" class="form-control" />
 						</div>
-
+						<!-- <div class="form-check">
+						<input value="{{$userDetails->name}}" type="checkbox" class="form-check-input" id="copyAddress">
+						<label class="form-check-label" for="copyAddress">Shipping Address same as Billing Address</label>
+						</div> -->
 				
 					</div><!--/login form-->
 				</div>

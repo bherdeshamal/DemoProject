@@ -282,10 +282,7 @@
                                    
                                   
                        
-                        <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link"
-                                href="view-users-charts" aria-expanded="false"><i class="mdi mdi-chart-bar"></i><span
-                                    class="hide-menu">Charts</span></a></li>
-                                    
+                                      
                                          
                                     <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link"
                                 href="http://127.0.0.1:8000/" aria-expanded="false"><i class="fa fa-power-off me-1 ms-1"></i><span

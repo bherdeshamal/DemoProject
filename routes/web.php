@@ -291,5 +291,10 @@ Route::get('order-proceed/{id}','OrderStatusController@proceedorder');
 
 
 Route::put('update-tracking-status/{id}','OrderStatusController@trackingstatus');
+
+//Route::get('newsletter','NewslettersSubcriptionController@index');
+Route::post('newsletter/store','NewslettersSubscriptionController@store');
+
+Route::get('charts','usermsController@charts');
 Auth::routes();
 

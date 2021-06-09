@@ -280,12 +280,6 @@
                                     class="hide-menu">Reports</span></a></li>
                            
                       
-                                   
-                                  
-                       
-                        <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link"
-                                href="view-users-charts" aria-expanded="false"><i class="mdi mdi-chart-bar"></i><span
-                                    class="hide-menu">Charts</span></a></li>
                                     
                                         
                                     <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link"
@@ -357,7 +351,7 @@
                             <table class="table table-bordered">
                             <thead>
                             <tr>
-                            <th><b><font color="red">Order No</b></th>
+                            <th><b><font color="red">User Id</b></th>
                             <th><b><font color="red">Product Id</b></th>
                             <th><b><font color="red">Product Name</b></th>
                            
@@ -374,13 +368,13 @@
                             <tbody>
                             @foreach($orders as $order)
                             <tr style="background:white;">
-                            <td>{{$order->id}} </td>
+                            <td>{{$order->user_id}} </td>
                             <td>@foreach($order->orders as $pro)
-                                    Prouct-id := {{$pro ->product_id}}</br></br>
+                                    Product-id := {{$pro ->product_id}}</br></br>
                                  @endforeach
                              </td>
                              <td>@foreach($order->orders as $pro)
-                                    Prouct-id := {{$pro ->name}}</br></br>
+                                    Product-id := {{$pro ->name}}</br></br>
                                  @endforeach
                              </td>
                             <td>{{$order->user_email}} </td>

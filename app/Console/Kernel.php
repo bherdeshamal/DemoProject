@@ -6,6 +6,8 @@ use Illuminate\Console\Scheduling\Schedule;
 use Illuminate\Foundation\Console\Kernel as ConsoleKernel;
 use Console\Commands\everyMinute;
 
+use Console\Commands\WeeklyUpdate;
+
 class Kernel extends ConsoleKernel
 {
     /**
@@ -14,7 +16,7 @@ class Kernel extends ConsoleKernel
      * @var array
      */
     protected $commands = [
-        //
+        commands\WeeklyUpdate::class,
     ];
 
     /**
@@ -25,8 +27,8 @@ class Kernel extends ConsoleKernel
      */
     protected function schedule(Schedule $schedule)
     {
-         $schedule->command('minute:update')
-                  ->everyMinute();
+         $schedule->command('weekly:update')
+                  ->everyminute();
     }
 
     /**

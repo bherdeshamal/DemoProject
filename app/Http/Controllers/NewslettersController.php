@@ -31,6 +31,16 @@ class NewslettersController extends Controller
         
             $user->save();
 
+            $user_email = $request->user_email;
+            $msgdata=[
+               '$user_email' =>$request->user_email,
+               '$admin_reply'=>$request->admin_reply,
+            ];
+            
+            Mail::send('emails.subscription_reply',$msgdata,function($message)use($user_email)
+            {
+                $message->to($user_email)->subject('Thanks For Susbcription');
+            });
             return redirect()->back()->with('success','Subscription done Successfully');
 
          }
@@ -53,22 +63,23 @@ class NewslettersController extends Controller
     {
         // $user_email = $data[user_email];
       //   'user_email' = $data[user_email];
+      $user_email = $request->user_email;
          $msgdata=[
-            'user_email' =>$request->user_email,
+            '$user_email' =>$request->user_email,
             '$admin_reply'=>$request->admin_reply,
          ];
          
-         $newsletter = Newsletter::find($id);
+        $newsletter = Newsletter::find($id);
         $newsletter->user_email = $request->user_email;
         $newsletter->admin_reply = $request->admin_reply;
         $newsletter->save();
          
-         Mail::to('shamalbherde02@gmail.com')->send(new adminreplyback($msgdata)); 
-     //  Mail::send('emails.subscription_reply',$msgdata,function($message)use($newsletter->user_email)
-       //{
-         //  $message->to($user_email)->subject('Thanks For Susbcription');
-       //});
-      
+      Mail::to('shamalbherde02@gmail.com')->send(new adminreplyback($msgdata)); 
+     
+      Mail::send('emails.subscription_reply',$msgdata,function($message)use($user_email)
+       {
+           $message->to($user_email)->subject('Thanks For Susbcription');
+       });
       
          Session::flash('success','Reply send Successfully.');
          return redirect('view-subscriptions');

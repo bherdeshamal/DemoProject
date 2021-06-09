@@ -109,7 +109,7 @@ class ProductsController extends Controller
       // $countProducts=Carrt::where('product_id',$product_id)->count();
        if($order>0)
        {
-        return redirect()->back()->with('success','Product exists in cart');
+        return redirect()->back()->with('success','Product exists in cart you cannot delete that');
        }   
        else
        {

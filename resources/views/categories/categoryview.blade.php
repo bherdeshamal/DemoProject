@@ -283,9 +283,6 @@
                                    
                                   
                        
-                        <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link"
-                                href="view-users-charts" aria-expanded="false"><i class="mdi mdi-chart-bar"></i><span
-                                    class="hide-menu">Charts</span></a></li>
                                     
                                           
                                     <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link"
