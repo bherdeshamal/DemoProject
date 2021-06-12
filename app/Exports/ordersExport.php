@@ -20,7 +20,7 @@ class ordersExport implements FromCollection,withHeadings,ShouldAutoSize
     {
        
         return $item = Order::all();
-        $created_at = date("jS F,  Y", strtotime($item->created_at));
+        date("jS F,  Y", strtotime($item));
     }
 
    

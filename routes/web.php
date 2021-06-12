@@ -205,6 +205,9 @@ Route::get('/shop', function ()
 
     Route::get('/shopproductdetailview', 'IndexController@productdetailshopee');
 
+    
+    //Route::get('/dashboard', 'IndexController@cms');
+
 Route::get('/contactus', function () {
     return view('frontend.contactus');
 });
@@ -285,6 +288,10 @@ Route::match(['get','post'],'/newsletter','NewslettersController@storesubcriptio
     Route::get('/view-subscriptions','NewslettersController@display');
     Route::get('/click_proceedSubcription/{id}','NewslettersController@respond');
     Route::post('/adminreply/{id}','NewslettersController@adminreply')->name('adminreply');
+    Route::get('/sendreply','NewslettersController@sendreply');
+    Route::post('/sendupdate','NewslettersController@sendupdate');
+    
+    Route::get('click_deletesubscriber/{id}','NewslettersController@deletesubscription');
 
 
 Route::get('order-proceed/{id}','OrderStatusController@proceedorder');

@@ -17,7 +17,7 @@ class usersExport implements FromCollection,withHeadings,ShouldAutoSize
     public function collection()
     {
         return $item=  User::all();
-        $created_at = date("jS F,  Y", strtotime($item->created_at));
+        date("jS F,  Y", strtotime($item));
     }
 
     

@@ -142,13 +142,14 @@
 		</div>
 	</section><!--/slider-->
 
+	               
 	<br></br></br>
 	<section>
 		<div class="container">
 			<div class="row">
 				<div class="col-sm-3">
 					<div class="left-sidebar">
-						<h2>CMS PAGES</h2>
+						<h2>Category</h2>
 
 
                         <div class="panel-group category-products" id="accordian"><!--category-productsr-->
@@ -170,9 +171,11 @@
 					</div>
 				</div>
 				
+<div align="right" fontsize="20px">	<a href="/index" class="btn btn-checkout" >   Back</a> </div> 
+                  
 				<div class="col-sm-9 padding-right">
 					<div class="features_items"><!--features_items-->
-                  
+					                   
 						 <h2 class="title text-center">{{$cmsPageDetails->title}} </h2>
 
 						  <h3><span> Your Featured Item will Referesh Soon  </span></h3>
@@ -181,13 +184,14 @@
 						<p class="title text-center">{{$cmsPageDetails->description}} </p>
 					</div><!--features_items-->
 					
+
+				
 				
 				
 				</div>
 			</div>
 		</div>
 	</section>
-    
 	<footer id="footer"><!--Footer-->
 		<div class="footer-top">
 			<div class="container">

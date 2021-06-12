@@ -88,6 +88,7 @@
 						<div class="single-widget">
 							<h2>Service</h2>
 							<ul class="nav nav-pills nav-stacked">
+							
 								<li><a href="{{url('pages/terms')}}">Online Help</a></li>
 								<li><a href="{{url('pages/terms')}}">Contact Us</a></li>
 								<li><a href="{{url('pages/order')}}">Order Status</a></li>

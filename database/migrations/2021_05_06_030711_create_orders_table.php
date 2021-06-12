@@ -31,8 +31,7 @@ class CreateOrdersTable extends Migration
             $table->string('tracking_msg')->default('Inprogress');
             $table->string('payment_method');
             $table->string('grand_total');
-            $table->date('created_at');
-            $table->date('updated_at');
+            $table->timestamps();
         });
     }
 

@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use Session;
 use App\Newsletter;
 use Mail;
+use App\Mail\newsmail;
 use App\Mail\adminreplyback;
 
 class NewslettersController extends Controller
@@ -39,7 +40,7 @@ class NewslettersController extends Controller
             
             Mail::send('emails.subscription_reply',$msgdata,function($message)use($user_email)
             {
-                $message->to($user_email)->subject('Thanks For Susbcription');
+                $message->to($user_email)->subject('Thanks For Subscription');
             });
             return redirect()->back()->with('success','Subscription done Successfully');
 
@@ -85,5 +86,49 @@ class NewslettersController extends Controller
          return redirect('view-subscriptions');
     }
  
+    public function sendreply()
+    {
+      $user = Newsletter::all();
+      return view('frontend.sendreply',compact('user'));
+    }
 
+    public function sendupdate(Request $request)
+    {
+
+      if($request->isMethod('post'))
+      {
+        $data =$request->all();
+
+          $user_email = $request->user_email;
+          $admin_reply = $request->admin_reply;
+            $data=[
+                'user_email' =>$user_email,
+                'admin_reply'=>$admin_reply,
+            ];
+          
+          $user = Newsletter::all();
+          foreach ($user as $a)
+          {
+           // Mail::to('$a->user_email')->send(new newsmail($data));
+            Mail::send('emails.updates',$data,function($message)use($a)
+              {
+                  $message->to($a->user_email)->subject('New Updates From E-Comm Website');
+              });
+
+          }
+      }
+      Session::flash('success','Reply send Successfully.');
+      return redirect('view-subscriptions');
+    }
+
+    public function deletesubscription($id)
+    {
+      $banner = Newsletter::find($id);
+	    $banner->delete();
+      
+     
+      Session::flash('danger','Subscriber deleted Successfully.');
+
+      return redirect('view-subscriptions');
+    }
 }

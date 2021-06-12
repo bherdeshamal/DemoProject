@@ -76,7 +76,22 @@
 								@endforeach
 							</div>
 						</div>
-						
+						<h2>CMS</h2>
+						<div class="panel-group category-products" id="accordian"><!--category-productsr-->
+							<div class="panel panel-default">
+								@foreach($page as $cms)
+						    	<div class="panel-heading">
+									<h4 class="panel-title">
+										<a data-toggle="collapse" data-parent="{{$cms->id}}" href="{{url('pages/$cms->url')}}">
+											<span class="badge pull-right"></span>
+											<a href= 'pages/{{$cms->url}}' > {{$cms->title}}</a>
+										</a>
+									</h4>
+								</div>
+								@endforeach
+							</div>
+						</div>
+					
 					
 						<div class="shipping text-center"><!--shipping-->
 							<img src="{{asset('images/frontimages/home/shipping.jpg')}}" alt="" />

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Coupon;
+use App\CmsPage;
 use App\Product;
 use App\Category;
 use App\Banner;
@@ -16,12 +17,19 @@ class IndexController extends Controller
 {
     public function index()
     {  
+        $page = CmsPage::select('id','title','url','description')->distinct()->get()->sortByDesc('id');
+      
         $key = Category::select('id','name')->distinct()->get()->sortByDesc('id');
         $pkey = Product::select('id','name','price','image')->distinct()->get()->sortByDesc('id');
         $banners=Banner::where('url','1')->get();
-        return view('index')->with(compact('key','pkey','banners'));
+        return view('index')->with(compact('page','key','pkey','banners'));
     }
 
+    // public function cms()
+    // {
+    //     $page = CmsPage::select('id','title','url','description')->distinct()->get()->sortByDesc('id');
+    //     return view('dashboard')->with(compact('page'));
+    // }
     public function shop()
     {
         $key = Category::select('id','name')->distinct()->get()->sortByDesc('id');
@@ -47,10 +55,12 @@ class IndexController extends Controller
 
     public function dashboard()
     {  
+        $page = CmsPage::select('id','title','url','description')->distinct()->get()->sortByDesc('id');
+       
         $key = Category::select('id','name')->distinct()->get()->sortByDesc('id');
         $pkey = Product::select('id','name','price','image')->distinct()->get()->sortByDesc('id');
         $banners=Banner::where('url','1')->get();
-        return view('dashboard')->with(compact('key','pkey','banners'));
+        return view('dashboard')->with(compact('page','key','pkey','banners'));
     }
 
     public function productshop()

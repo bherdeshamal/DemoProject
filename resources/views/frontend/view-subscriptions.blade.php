@@ -336,6 +336,8 @@
                                     <section>
                                         </br>
                                          <a href="/home" class="btn btn-danger">   HOME</a>  
+                                         <a href="/sendreply" class="btn btn-info">   Send Reply</a>  
+                                       
                                         </br>
                             <form>
                             </br>
@@ -361,9 +363,9 @@
                             <tr>
                             <th><b><font color="red">Sr. No</th>
                             <th><b><font color="red">User Email</th>
-                            <th><b><font color="red">Admin Response</th>
-                            
-                            <th colspan =2><b><font color="red"> Action</th>
+                           <!-- <th><b><font color="red">Admin Response</th>
+                            -->
+                            <th colspan =1><b><font color="red"> Action</th>
                             </tr>
                             </thead>
                             <tbody>
@@ -371,9 +373,9 @@
                             <tr style="background:white;">
                             <td>{{$newsletter->id}} </td>
                             <td>{{$newsletter->user_email}} </td>
-                            <td>{{$newsletter->admin_reply}} </td>
-                             <td><a href="click_proceedSubcription/{{$newsletter->id}}" class="btn btn-success" >Respond</a></td>
-                   
+                         <!--   <td>{{$newsletter->admin_reply}} </td>-->
+                            <td><a href="/click_deletesubscriber/{{$newsletter->id}}" class="btn btn-danger" onclick="return confirm('Are you sure you want to delete?')">Unsubscribe</a></td>
+                            
                             </tbody>
                             @endforeach
                             </table>

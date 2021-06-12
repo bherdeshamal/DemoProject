@@ -78,6 +78,8 @@ class FrontenduserloginController extends Controller
               $user->country='';
               $user->pincode='';
               $user->mobile='';
+              
+              $user->role=0;
               $user->save();
 
               if(Auth::attempt(['email'=>$data['email'],'password'=>$data['password']]))
@@ -350,7 +352,7 @@ class FrontenduserloginController extends Controller
    }
 
    public function exportusers()
-   {
+   {$a=Carbon::now();
      return Excel::download(new usersExport,'users.xlsx');
    }
 

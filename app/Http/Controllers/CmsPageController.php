@@ -70,6 +70,8 @@ class CmsPageController extends Controller
 
     public function cmsPage($url)
     {
+        $page = CmsPage::select('id','title','url','description')->distinct()->get()->sortByDesc('id');
+      
         $key = Category::select('id','name')->distinct()->get()->sortByDesc('id');
         $cmsPageCount=CmsPage::where(['url'=>$url,'status'=>1])->count();
         if($cmsPageCount >0)
@@ -81,6 +83,6 @@ class CmsPageController extends Controller
         {
            abort(404);
         }
-         return view('frontend.cms_page')->with(compact('key','cmsPageDetails'));
+         return view('frontend.cms_page')->with(compact('page','key','cmsPageDetails'));
     }
 }
