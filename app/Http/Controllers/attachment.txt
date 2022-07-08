@@ -1,0 +1,25 @@
+<div class="form-group">
+                    <div class="row">
+                        <!-- reply content -->
+                        <div class="form-group " id="reply_content_class">
+                            <div class="col-md-12">
+                                <label for="attachment">Attachment</label> 
+                                <span style="color: indianred; display: inline">Max. File size: 2MB</span>
+                                <a id='clear-file' onClick='clearAll()' style='display:none; cursor:pointer;'>
+                                <i class='fa fa-close'></i> Clear all</a>
+                            </div>
+                            <div class="col-md-12">
+                                <div id="reset-attachment">
+                                    <div> 
+                                        <input type='file' style="margin-bottom: 4px" name='attachment[]' id='attachment' />
+                                    </div>
+                                     <span>Supported files: pdf, xls, xlsx, doc, docx, jpg, jpeg, png, gif</span>
+                                    <div>
+                                        <a id='clear-file' onClick='clearAll()' style='display:none; cursor:pointer;'><i class='fa fa-close'></i>Clear all</a>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
